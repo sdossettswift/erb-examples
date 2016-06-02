@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     7.0],
+          ['Eat',      2.5],
+          ['Commute',  1.5],
+          ['Watch TV', 1.0],
+          ['Sleep',    8.0],
+          ['Unallocated', 4.0]
+        ]);
+
+        var options = {
+          title: 'Jesse Rules'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+
+    <h1>Hii -- Hours: 20.0</h1>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Task
+          </th>
+          <th>
+            Hours
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Work
+          </td>
+          <th>
+            7.0
+          </th>
+        </tr>
+
+        <tr>
+          <td>
+            Eat
+          </td>
+          <td>
+            2.5
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </body>
+</html>
